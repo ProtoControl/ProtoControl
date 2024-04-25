@@ -1,0 +1,46 @@
+.icon-container {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    border-radius: 15px;
+    border: 2px solid #333;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .settings-icon, .quad-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  .settings-icon {
+    top: 5px;
+    right: 30px;
+  }
+
+  .quad-icon {
+    top: 5px;
+    right: 5px;
+    }
+
+
+  .center-button {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .center-button:hover {
+    background-color: #0056b3;
+  }

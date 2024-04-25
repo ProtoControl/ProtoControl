@@ -1,0 +1,39 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.code-window {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    overflow: auto;
+    width: 25%;
+    height: 25%;
+    box-sizing: border-box;
+}
+
+
+#code {
+    margin: 0;
+}
+
+.keyword {
+    color: #569CD6;
+}
+
+.string {
+    color: #CE9178;
+}
+
+.function {
+    color: #DCDCAA;
+}
+
+.method {
+    color: #D7BA7D;
+}

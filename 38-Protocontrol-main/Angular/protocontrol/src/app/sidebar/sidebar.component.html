@@ -1,0 +1,23 @@
+<div class="sidebar" cdkDropList [cdkDropListConnectedTo]="connectedDropLists">
+    <div>
+        <h1> Components: </h1>
+    </div>
+    <div class="draggable-components" *ngFor="let item of items"
+         cdkDrag
+         (cdkDragStarted)="onDragStart(item)"
+         (click)="selectComponent(item.component)">
+        <ng-container [ngSwitch]="item.label">
+            <app-protobutton *ngSwitchCase="'Button'"></app-protobutton>
+            <app-protoslider *ngSwitchCase="'Slider'"></app-protoslider>
+            <app-prototoggle *ngSwitchCase="'Toggle'"></app-prototoggle>
+            <app-protoinc *ngSwitchCase="'Increment/Decrement'"></app-protoinc>
+            <app-prototerminal *ngSwitchCase="'Terminal'"></app-prototerminal>
+        </ng-container>
+    </div>
+    <!--app-image-upload></app-image-upload-->
+    <label class="form-label">Profile:</label>
+    <select [(ngModel)]="profileNumber" (change)="onSelectionChange()">
+      <option *ngFor="let n of [1, 2, 3, 4, 5]" [value]="n">{{ n }}</option>
+    </select>
+    <button class="generate-button" (click)="generateString()">Generate</button>
+</div>

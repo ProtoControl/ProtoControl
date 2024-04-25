@@ -1,0 +1,12 @@
+<ng-container class="click-gear-directions" *ngIf="isOpen">
+  <h2>Please click the '</h2>
+  <i id="demo-gear-icon" class="fa fa-cog"></i>
+  <h2>' on the component you would like to configure</h2>
+</ng-container>
+<ng-container *ngIf="settings">
+  <app-button-form *ngIf="isButton()" [button]="settings"></app-button-form>
+  <app-increment-form *ngIf="isIncrement()" [increment]="settings"></app-increment-form>
+  <app-slider-form *ngIf="isSlider()" [slider]="settings"></app-slider-form>
+  <app-toggle-form *ngIf="isToggle()" [toggle]="settings"></app-toggle-form>
+  <app-terminal-form *ngIf="isTerminal()" [terminal]="settings"></app-terminal-form>
+</ng-container>

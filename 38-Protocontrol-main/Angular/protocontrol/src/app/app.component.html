@@ -1,0 +1,19 @@
+<div class="testing">
+  <app-sidebar [connectedDropLists]="gridIds"></app-sidebar>
+  <div class="grid-container">
+    <ng-container *ngFor="let item of gridCells; let i = index">
+      <div class="grid-item"
+        cdkDropList id="{{'container-' + i}}"
+        (cdkDropListDropped)="onDrop($event, i)"
+        [ngClass]="{ 'disabled-grid-item': disabledIndices.includes(i) && !componentInfo.has(i) }">
+        <div class="background-letter" *ngIf="!disabledIndices.includes(i) || componentInfo.has(i)">
+          {{indexToLetter(i)}}
+        </div>
+        <ng-template #dynamicComponentContainer></ng-template>
+      </div>
+    </ng-container>
+  </div>
+  <div class="side-panel-div">
+    <app-side-panel (panelStateChange)="handlePanelStateChange($event)"></app-side-panel>
+  </div>
+</div>

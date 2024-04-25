@@ -1,0 +1,21 @@
+/* Replace black fills with white */
+svg path[fill='#000000'],
+svg path[fill='black'],
+svg circle[fill='#000000'],
+svg circle[fill='black'],
+svg rect[fill='#000000'],
+svg rect[fill='black'],
+svg line[stroke='#000000'],
+svg line[stroke='black'],
+svg polyline[stroke='#000000'],
+svg polyline[stroke='black'],
+svg polygon[stroke='#000000'],
+svg polygon[stroke='black'] {
+    fill: white;
+    stroke: white;
+}
+
+/* If you also have images inside your SVG and want to apply filters to invert their colors */
+svg image {
+    filter: invert(1);
+}

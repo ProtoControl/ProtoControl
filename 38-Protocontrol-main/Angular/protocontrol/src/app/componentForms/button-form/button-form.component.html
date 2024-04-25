@@ -1,0 +1,30 @@
+<div class="form-container">
+  <div class="input-form-title">
+    <h1>Button: {{button.text}}</h1>
+  </div>
+  <div>
+    <label class="form-label">Color:</label>
+    <select [(ngModel)]="button.color">
+      <option *ngFor="let color of colors" [value]="color.value">{{ color.name }}</option>
+    </select>
+  </div>
+  <div>
+    <label class="form-label">Text Color:</label>
+    <select [(ngModel)]="button.textColor">
+      <option *ngFor="let color of colors" [value]="color.value">{{ color.name }}</option>
+    </select>
+  </div>
+  <div>
+    <label class="form-label">Button Text:</label>
+    <input class="form-input-text" type="text" maxlength="4" [(ngModel)]="button.text">
+  </div>
+  <div>
+    <div class="button-container">
+      <button style="display: inline;" class="save-button" (click)="save()">Save</button>
+      <button style="display: inline;" class="delete-button" (click)="delete()">Delete</button>
+    </div>
+  </div>
+  <div>
+    <p class="input-form-caption">Please make any desired modifications to your component, then press save</p>
+  </div>
+</div>

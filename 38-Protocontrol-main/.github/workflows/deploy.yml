@@ -1,0 +1,53 @@
+name: Build and Deploy
+on:
+  push:
+    paths:
+       - Angular/**
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+
+    - name: Install Angular CLI
+      run: npm install -g @angular/cli
+
+
+    - name: Install Dependencies and Build Angular App
+      run: |
+        pwd
+        ls -la
+        cd Angular/protocontrol
+        npm install
+        ng build --configuration production --base-href "/ECE-Senior-Design-Fa2023-Sp2024/38-Protocontrol/"
+        ls -la
+    - name: Copy Build Files to gh-hosting Branch
+      uses: ./actions/
+      with:
+        branch: gh-hosting
+        
+        folder: Angular/protocontrol/dist/protocontrol/
+
+
+
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.email "whwood@ncsu.edu"
+        git config --global user.name "whwood"
+        git stash
+        git pull origin main
+        git stash apply
+        git add .
+        if git diff --quiet --cached; then
+            echo "No changes to commit. Skipping commit step."
+            exit 0
+        fi
+        git commit -m "Auto-deploy build files" --allow-empty
+        git push origin main

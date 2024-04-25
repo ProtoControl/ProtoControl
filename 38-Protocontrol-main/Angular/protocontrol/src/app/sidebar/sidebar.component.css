@@ -1,0 +1,44 @@
+.sidebar {
+  display: flex;
+  width: 20%; /* Sidebar takes up 20% of the viewport width */
+  max-width: 20%; /* Ensures it never takes up more than 20% */
+   /* Full height of the viewport */
+  background-color: gray; /* Slightly darker than the standard background */
+  position: fixed; /* Makes the sidebar stay in place when scrolling */
+  top: 0; /* Start at the top of the screen */
+  left: 0; /* Start at the leftmost side of the screen */
+  overflow-y: auto; /* Adds a scrollbar if content overflows vertically */
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 8px;
+  flex-direction: column;
+  }
+.sidebar-container {
+  width: 20%;
+  padding: 1rem;
+  background-color: lightblue;
+}
+
+
+.sidebar-item {
+  width: 150px;
+  height: 30px;
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 4px;
+  cursor: grab; /* Cursor indication for draggable items */
+}
+
+.sidebar-item:hover {
+  background-color: #2980b9;
+}
+
+.sidebar-item:active {
+  cursor: grabbing; /* Cursor indication while dragging */
+}

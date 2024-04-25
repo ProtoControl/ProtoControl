@@ -1,0 +1,80 @@
+
+.app-container {
+    display: flex;
+    height: 100vh;
+  }
+  .app-sidebar {
+    display: flex;
+    width: 20%;
+    background-color: #f5f5f5;
+    overflow-y: auto;
+    padding: 1rem;
+  }
+
+  .background-letter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em; /* Adjust based on your preference */
+    opacity: 0.5;
+    pointer-events: none; /* Ensures clicks go through this layer */
+  }
+
+  .side-panel-div {
+    display: flex;
+    /*border: 3px solid black;*/
+    flex-grow: 1;
+    align-self: stretch;
+    width: 20%;
+    background-color: gray;
+    border-radius: 5px;
+  }
+
+  .app-canvas {
+    display: flex;
+    position: relative;
+    width: 60%;
+    background-color: #e0e0e0;
+    overflow-y: auto;
+    padding: 1rem;
+  }
+
+  .testing {
+    display:flex;
+    align-items: center;
+  }
+
+
+  .empty{
+    position: relative;
+    width: 20%;
+    overflow-y: auto;
+    margin-left: 80%;
+    padding: 1rem;
+    height: 300px;
+    width: 200px;
+    border: 15px;
+    border-color: brown;
+    background-color: aqua;
+}
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 60%;  /* as sidebar takes up 20% */
+    margin-left: 20%;  /* to offset sidebar */
+  }
+
+
+  .grid-item {
+    height: 100px;
+    border: 2px dashed #ccc;  /* giving a visual indication of drop zone */
+    position: relative;  /* to position dynamically added components correctly */
+  }
+
+  .disabled-grid-item {
+    opacity: 0.20; /* Adjust opacity to control the level of greyed out effect */
+    background-color: darkgray;
+    pointer-events: none; /* Disable pointer events to prevent interaction with disabled items */
+  }

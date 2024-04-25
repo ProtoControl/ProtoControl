@@ -1,0 +1,39 @@
+name: Forward Changes
+
+on:
+  push:
+    branches:
+      - source-branch
+
+jobs:
+  forward_changes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Repository
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.ref }}
+
+      - name: Set up Git
+        run: |
+          git config --global user.name 'William Wood'
+          git config --global user.email 'whwood@ncsu.edu'
+
+      - name: Clone Target Repository
+        run: git clone https://github.com/AwesomeWHT/ProtoControl.git target-repository
+
+      - name: Copy Changes
+        run: |
+          mkdir source-repository
+          cp -r ${{ github.workspace }}/* source-repository/
+          cd target-repository
+          cp -r ../source-repository/* .
+          git add .
+          git commit -m "Forward changes from source-branch"
+          git push origin main # Change 'main' to the target branch if needed
+
+      - name: Cleanup
+        run: |
+          rm -rf source-repository
+          rm -rf target-repository

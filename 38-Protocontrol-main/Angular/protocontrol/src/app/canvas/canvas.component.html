@@ -1,0 +1,3 @@
+<div class="grid" cdkDropList (cdkDropListDropped)="drop($event)">
+  <div class="grid-item" *ngFor="let item of gridItems"  [ngClass]="{'has-content': item}" cdkDrag>{{ item }}</div>
+</div>

@@ -1,0 +1,36 @@
+<div class="form-container">
+  <div class="input-form-title">
+    <h1>Slider: {{slider.text}}</h1>
+  </div>
+  <div>
+    <label class="form-label">Bar Color:</label>
+    <select [(ngModel)]="slider.color">
+      <option *ngFor="let color of colors" [value]="color.value">{{ color.name }}</option>
+    </select>
+  </div>
+  <div>
+    <label class="form-label">Slider Color:</label>
+    <select [(ngModel)]="slider.textColor">
+      <option *ngFor="let color of colors" [value]="color.value">{{ color.name }}</option>
+    </select>
+  </div>
+  <!--div>
+      <label class="form-label">Slider Text:</label>
+      <input class="form-input-text" type="text" maxlength="4" [(ngModel)]="slider.text">
+    </div-->
+  <div>
+    <label class="form-label">Minimum Value:</label>
+    <input class="form-input-text" type="number" [(ngModel)]="slider.min">
+  </div>
+  <div>
+    <label class="form-label">Maximum Value:</label>
+    <input class="form-input-text" type="number" [(ngModel)]="slider.max">
+  </div>
+    <div class="button-container">
+      <button style="display: inline;" class="save-button" (click)="save()">Save</button>
+      <button style="display: inline;" class="delete-button" (click)="delete()">Delete</button>
+    </div>
+  <div style="display: inline;" class="input-form-caption">
+    <p>Please make any desired modifications to your component, then press save</p>
+  </div>
+</div>

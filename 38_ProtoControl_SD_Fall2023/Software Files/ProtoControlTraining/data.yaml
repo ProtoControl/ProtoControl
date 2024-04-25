@@ -1,0 +1,13 @@
+train: "/content/drive/MyDrive/38_ProtoControl_SD_Fall2023/Software Files/ProtoControlTraining/train"
+val: "/content/drive/MyDrive/38_ProtoControl_SD_Fall2023/Software Files/ProtoControlTraining/valid"
+test: "/content/drive/MyDrive/38_ProtoControl_SD_Fall2023/Software Files/ProtoControlTraining/test"
+
+nc: 6
+names: ['Button', 'Command', 'IncDec', 'Slider', 'Text', 'Toggle']
+
+roboflow:
+  workspace: protocontrol
+  project: protocontrol-ui-design
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/protocontrol/protocontrol-ui-design/dataset/1

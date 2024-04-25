@@ -1,0 +1,61 @@
+/* canvas.component.css */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* creates a 4x4 grid layout */
+  gap: 10px; /* space between grid items */
+  width: 60%; /* subtract the width of the sidebar */
+  height: 100vh;
+  padding: 20px; /* gives some space around the grid */
+  box-sizing: border-box;
+  margin-left: 20%; /* offset by the width of the sidebar */
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc((100vh - 2 * 20px - 3 * 10px) / 4); /* height calculation considering padding and gap for 4 rows */
+  background-color: #f1f1f1; /* light background to see the items better */
+  border: 2px solid #ddd; /* grid item border */
+  transition: background-color 0.3s; /* smooth transition for hover effects */
+
+  /* Hover effect to make it more intuitive for dragging and dropping */
+  &:hover {
+    background-color: #e0e0e0;
+  }
+}
+
+
+.grid-row {
+  display: flex;
+}
+
+.grid-slot {
+  flex: 1;
+  width: 150px;
+  height: 40px;
+  border: 1px solid #ccc;
+  margin: 5px;
+  position: relative;
+  background-color: #e0e0e0;
+  transition: background-color 0.2s;
+}
+
+.grid-slot:hover {
+  background-color: #d0d0d0;
+}
+
+.ui-box {
+  width: 100%;
+  height: 100%;
+  background-color: #3498db;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+

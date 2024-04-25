@@ -1,0 +1,27 @@
+<div class="form-container">
+  <div class="input-form-title">
+    <h1>Toggle</h1>
+  </div>
+<!--div>
+    <label>X:</label>
+    <input type="number" [(ngModel)]="toggle.x">
+</div>
+<div>
+    <label>Y:</label>
+    <input type="number" [(ngModel)]="toggle.y">
+</div-->
+<div>
+  <label>Text Color:</label>
+  <select [(ngModel)]="toggle.color">
+    <option *ngFor="let color of colors" [value]="color.value">{{ color.name }}</option>
+  </select>
+  <div>
+    <div class="button-container">
+      <button style="display: inline;" class="save-button" (click)="save()">Save</button>
+      <button style="display: inline;" class="delete-button" (click)="delete()">Delete</button>
+    </div>
+  </div>
+  <div>
+    <p class="input-form-caption">Please make any desired modifications to your component, then press save</p>
+  </div>
+</div>

@@ -1,0 +1,113 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.canvas-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #eee;
+    overflow-y: auto;
+    padding: 1rem;
+    box-shadow: 2px 0px 5px rgba(0,0,0,0.1);
+}
+
+.canvas {
+    flex: 1;
+    background-color: #f9f9f9;
+    position: relative;
+    border-left: 1px solid #ddd;
+    padding: 1rem;
+}
+
+.component {
+    padding: 10px;
+    color: red;
+    background-color: black;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.canvas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+.component {
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.component:hover {
+    background-color: #e6e6e6;
+}
+.canvas {
+    /* ... other styles ... */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+}
+.canvas {
+    /* ... other styles ... */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.component, .placeholder {
+    /* shared styles... */
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.component {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder {
+    border: 1px dashed #ddd; /* To visualize the drop areas */
+}
+.canvas {
+    /* ... other styles ... */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.component, .placeholder {
+    /* shared styles... */
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.component {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder {
+    border: 1px dashed #ddd; /* To visualize the drop areas */
+}
+.placeholder.hidden {
+    visibility: hidden;
+}

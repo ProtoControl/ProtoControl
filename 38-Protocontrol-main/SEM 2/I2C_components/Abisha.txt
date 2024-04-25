@@ -1,0 +1,1 @@
+This is a testing folder used to integrate the I2C components with the main sketch

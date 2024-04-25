@@ -1,0 +1,28 @@
+.upload-container {
+    width: 100%; /* This makes sure the container spans the full width of the sidebar */
+    margin-top: 30px;
+    display: flex;
+    scale: 5;
+    justify-content: center; /* This centers the content horizontally */
+    align-items: center; /* This centers the content vertically, if needed */
+  }
+
+  .upload-container label {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .upload-container input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Make it invisible */
+    cursor: pointer;
+    z-index: 2; /* Place it above the icon */
+  }

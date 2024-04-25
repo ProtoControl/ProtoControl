@@ -1,0 +1,110 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { font-family: Roboto, "Helvetica Neue", sans-serif; background-color: gray; }
+
+/*
+div {
+    border: 2px solid rebeccapurple;
+}
+*/
+.icon-container {
+    transition: background-color 100ms ease;
+}
+
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.input-form-title{
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.form-container .form-label {
+    color: white;
+    margin-bottom: 100px;
+    padding-bottom: 100px;
+}
+.input-form-caption{
+    color: white;
+    margin-left: 30px;
+    align-self: center;
+
+}
+
+.form-input-text{
+    width: auto;
+    max-width: calc(1ch * 6 + 5px);
+}
+
+.icon-container:hover {
+    background-color: darkgrey;
+    height: 115%;
+    width: 115%;
+}
+
+.save-button {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+  }
+.delete-button {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+  }
+.generate-button{
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+.generate-button:hover {
+    background-color: darkblue;
+    transition: background-color 100ms ease
+}
+.delete-button:hover{
+    background-color: darkred;
+    transition: background-color 100ms ease
+
+
+}
+.save-button:hover{
+    background-color: darkgreen;
+    transition: background-color 100ms ease
+
+}
+
+.save-button:hover {
+    background-color: darkgreen;
+    transition: background-color 100ms ease
+
+}
+
+.settings-icon:hover, .quad-icon:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect on hover */
+}
+.quad-icon:hover {
+    background-color: darkgrey;
+    height: 105%;
+    width: 105%;
+}

@@ -1,0 +1,76 @@
+.icon-container {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    border-radius: 15px;
+    border: 2px solid #333;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px; /* Reduced the gap to half */
+}
+
+/* ... the rest of your styles ... */
+
+  .triangle {
+    width: 0;
+    height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .triangle-up {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 40px solid #007BFF;
+    position: relative;
+  }
+  .triangle-up span {
+    top: 25px;
+  }
+  .triangle-down span{
+    bottom: 15px
+  }
+  .triangle-down {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 40px solid #007BFF;
+    position: relative;
+  }
+  .triangle span {
+    color: white;  /* Color for symbols */
+    font-weight: bold;
+    font-size: 1em;
+    z-index: 1; /* Ensure the symbol appears above triangle */
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    text-align: center;
+    line-height: 12px; /* Adjusted line-height for better centering */
+  }
+  .settings-icon, .quad-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .settings-icon {
+    top: 5px;
+    right: 30px;  /* Adjusted to make space for the quad icon */
+  }
+
+  .quad-icon {
+    top: 5px;
+    right: 5px; /* Positioned next to the settings icon */
+  }
+
